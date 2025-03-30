@@ -8,7 +8,7 @@
 
 #define BLOCK_L         32
 #define NUM_BLOCKS      4
-#define NUM_PIECES      7
+#define NUM_PIECES      8
 
 #define WIN_X           SDL_WINDOWPOS_CENTERED
 #define WIN_Y           SDL_WINDOWPOS_CENTERED
@@ -28,5 +28,5 @@
 
 
 enum Shape {
-    I = 1, O, T, S, Z, J, L /*, U*/
+    I = 1, O, T, S, Z, J, L, U
 };

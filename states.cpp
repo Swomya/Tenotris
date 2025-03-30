@@ -173,29 +173,29 @@ const stateArray statesL = {
     }
 };
 
-//const stateArray statesU = {
-//     {
-//        {{U,0,U,0},
-//         {U,U,U,0},
-//         {0,0,0,0},
-//         {0,0,0,0}},
-//
-//        {{0,U,U,0},
-//         {0,U,0,0},
-//         {0,U,U,0},
-//         {0,0,0,0}},
-//
-//        {{0,0,0,0},
-//         {U,U,U,0},
-//         {U,0,U,0},
-//         {0,0,0,0}},
-//
-//        {{U,U,0,0},
-//         {0,U,0,0},
-//         {U,U,0,0},
-//         {0,0,0,0}}
-//    }
-//};
+const stateArray statesU = {
+     {
+        {{U,0,U,0},
+         {U,U,U,0},
+         {0,0,0,0},
+         {0,0,0,0}},
+
+        {{0,U,U,0},
+         {0,U,0,0},
+         {0,U,U,0},
+         {0,0,0,0}},
+
+        {{0,0,0,0},
+         {U,U,U,0},
+         {U,0,U,0},
+         {0,0,0,0}},
+
+        {{U,U,0,0},
+         {0,U,0,0},
+         {U,U,0,0},
+         {0,0,0,0}}
+    }
+};
 
 
 
@@ -215,8 +215,8 @@ const int (*getBlockStates(Shape s))[NUM_BLOCKS][NUM_BLOCKS]{
         return statesJ.arr;
     case L:
         return statesL.arr;
-    //case U:
-    //    return statesU.arr;
-
+    case U:
+        return statesU.arr;
+    }
     return nullptr;
 }
