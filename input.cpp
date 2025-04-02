@@ -1,6 +1,7 @@
 #include "input.hpp"
+#include <cstring>
 
-static const bool* keyboardState;
+static const Uint8* keyboardState;
 static Uint8* prevKeyboardState;
 static int numKeys;
 

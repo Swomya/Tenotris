@@ -71,6 +71,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>D:\code1\tetris\Project1\SDL2_image-2.8.6\lib\x64;D:\code1\tetris\Project1\SDL2_ttf-2.24.0\lib\x64;D:\code1\tetris\Project1\SDL2-2.32.4\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\code1\tetris\Project1\SDL2-2.32.4\include;D:\code1\tetris\Project1\SDL2_ttf-2.24.0\include;D:\code1\tetris\Project1\SDL2_image-2.8.6\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -105,13 +109,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\code1\tetris\Project1\SDL3-3.2.8\include;D:\code1\tetris\Project1\SDL3_ttf-3.2.0\include;D:\code1\tetris\Project1\SDL3_image-3.2.4\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\code1\tetris\Project1\SDL2-2.32.4\include;D:\code1\tetris\Project1\SDL2_ttf-2.24.0\include;D:\code1\tetris\Project1\SDL2_image-2.8.6\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\code1\tetris\Project1\SDL3_image-3.2.4\lib\x64;D:\code1\tetris\Project1\SDL3_ttf-3.2.0\lib\x64;D:\code1\tetris\Project1\SDL3-3.2.8\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL3.lib;SDL3_ttf.lib;SDL3_image.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\code1\tetris\Project1\SDL2_image-2.8.6\lib\x64;D:\code1\tetris\Project1\SDL2_ttf-2.24.0\lib\x64;D:\code1\tetris\Project1\SDL2-2.32.4\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_image.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

@@ -2,7 +2,7 @@
 #include "game.hpp"
 #include "graphics.hpp"
 #include "input.hpp"
-#include <SDL3/SDL.h>
+#include <SDL.h>
 
 Game::Game()
     : fallingPiece(board) {
@@ -79,7 +79,7 @@ int Game::clearLines() {
         if (i > lowestCleared - clearedLines) {
 
             for (int col = 0; col < COLS; col++)
-                board[i][col] += 10; 
+                board[i][col] += 10; // Mark line as cleared
         }
     }
 
@@ -93,7 +93,7 @@ void Game::handleEvents() {
 
     while (SDL_PollEvent(&event)) {
         switch (event.type) {
-        case SDL_EVENT_QUIT:
+        case SDL_QUIT:
             running = false;
             break;
         }
@@ -150,7 +150,7 @@ void Game::renderBoard() {
 
                 flag = (board[row][col] >= 10);
                 doClearDelay |= flag;
-                board[row][col] -= 10 * flag;
+                board[row][col] -= 10 * flag; // Unmark cleared block
             }
 
         }

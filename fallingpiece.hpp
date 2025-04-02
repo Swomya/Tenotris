@@ -1,8 +1,8 @@
 #pragma once
 #include "defines.hpp"
 #include "shapegenerator.hpp"
-#include <SDL3/SDL_scancode.h>
-#include <SDL3/SDL_timer.h>
+#include <SDL_scancode.h>
+#include <SDL_timer.h>
 
 enum Action {
     ACTION_NONE = 0,

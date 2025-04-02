@@ -24,9 +24,6 @@
 #define KEY_HOLD_DELAY  200
 
 
-#define SDL_RENDERER_ACCELERATED "opengl" 
-
-
 enum Shape {
     I = 1, O, T, S, Z, J, L, U
 };
