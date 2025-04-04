@@ -1,30 +1,57 @@
-#pragma once
-#include "defines.hpp"
-#include "fallingpiece.hpp"
+#ifndef GAME_HPP
+#define GAME_HPP
 
-class Game {
+#include <vector>
+
+#include <SDL.h>
+#include <SDL_ttf.h>
+
+#include "inputmanager.hpp"
+#include "renderer.hpp"
+#include "state.hpp"
+
+class State;
+class GameState;
+class MenuState;
+class OptionsState;
+class PausedState;
+
+// Utilizes the "Singleton pattern" to ensure there can only be one game
+class Game
+{
 public:
-    Game();
-    ~Game();
-    bool init();
-    bool loadAssets();
-    void start();
-    void handleEvents();
-    void update();
-    void render();
-    bool isRunning() { return running; };
-    void sleep();
+    friend class OptionsState;          // Options can change the window size            
+    static Game* getInstance();
 
+    bool initialize ();
+    void exit ();
+    void run ();
+    
+    void popState ();
+    void pushState (State *s);
+    void changeState (State *s);
+
+    static void pushOptions();
+    static void pushNewGame();
+    static void pushPaused();
+    static void goBack();
+    static void goDoubleBack();
+
+    bool isGameExiting();
+
+    Renderer *mRenderer;                // The renderer used for all things rendering
+    
 private:
-    int board[ROWS][COLS] = { 0 };
-    int occupiedBlocks[ROWS] = { 0 };
-    bool running = true;
-    int score = 0;
-    bool gameDoClearDelay = false;
-    FallingPiece fallingPiece;
+    static Game *mInstance;
+    Game();
+    SDL_Window *mWindow;
+    InputManager *mManager;
+    std::vector<State*> mStates;
 
-    void spawnPiece();
-    bool placePiece();
-    int clearLines();
-    void renderBoard();
+    GameState *mPlayState;
+    MenuState *mMainMenuState;
+    OptionsState *mOptionsState;
+    PausedState *mPausedState;
 };
+
+#endif // GAME_HPP

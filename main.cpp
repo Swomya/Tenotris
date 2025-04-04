@@ -1,19 +1,18 @@
+
 #include "game.hpp"
+#undef main 
 
-int main(void) {
-    Game game;
-
-    if (game.init()) {
-
-        game.start();
-
-        while (game.isRunning()) {
-
-            game.handleEvents();
-            game.update();
-            game.render();
-            game.sleep();
+int main(int argc, char **argv)
+{
+    
+    Game *game = Game::getInstance();
+    if (game->initialize())
+    {
+        while (!game->isGameExiting())
+        {
+            game->run();
         }
+        game->exit();
     }
-
+    return 0;
 }

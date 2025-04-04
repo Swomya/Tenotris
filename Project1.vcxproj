@@ -18,6 +18,40 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="board.hpp" />
+    <ClInclude Include="button.hpp" />
+    <ClInclude Include="config.hpp" />
+    <ClInclude Include="game.hpp" />
+    <ClInclude Include="gamestate.hpp" />
+    <ClInclude Include="inputmanager.hpp" />
+    <ClInclude Include="menustate.hpp" />
+    <ClInclude Include="optionsstate.hpp" />
+    <ClInclude Include="pausedstate.hpp" />
+    <ClInclude Include="piece.hpp" />
+    <ClInclude Include="renderer.hpp" />
+    <ClInclude Include="state.hpp" />
+    <ClInclude Include="tetromino_matrices.hpp" />
+    <ClInclude Include="texture.hpp" />
+    <ClInclude Include="utilities.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="board.cpp" />
+    <ClCompile Include="button.cpp" />
+    <ClCompile Include="config.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="gamestate.cpp" />
+    <ClCompile Include="inputmanager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="menustate.cpp" />
+    <ClCompile Include="optionsstate.cpp" />
+    <ClCompile Include="pausedstate.cpp" />
+    <ClCompile Include="piece.cpp" />
+    <ClCompile Include="renderer.cpp" />
+    <ClCompile Include="state.cpp" />
+    <ClCompile Include="texture.cpp" />
+    <ClCompile Include="utilities.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -72,7 +106,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LibraryPath>D:\code1\tetris\Project1\SDL2_image-2.8.6\lib\x64;D:\code1\tetris\Project1\SDL2_ttf-2.24.0\lib\x64;D:\code1\tetris\Project1\SDL2-2.32.4\lib\x64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Program Files (x86)\Windows Kits\10\Lib\10.0.22621.0\um\x64;D:\code1\tetris\Project1\SDL2_image-2.8.6\lib\x64;D:\code1\tetris\Project1\SDL2_ttf-2.24.0\lib\x64;D:\code1\tetris\Project1\SDL2-2.32.4\lib\x64;$(LibraryPath)</LibraryPath>
     <IncludePath>D:\code1\tetris\Project1\SDL2-2.32.4\include;D:\code1\tetris\Project1\SDL2_ttf-2.24.0\include;D:\code1\tetris\Project1\SDL2_image-2.8.6\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -114,8 +148,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\code1\tetris\Project1\SDL2_image-2.8.6\lib\x64;D:\code1\tetris\Project1\SDL2_ttf-2.24.0\lib\x64;D:\code1\tetris\Project1\SDL2-2.32.4\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_image.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\code1\tetris\Project1\SDL2_image-2.8.6\lib\x64;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.22621.0\um\x64;D:\code1\tetris\Project1\SDL2_ttf-2.24.0\lib\x64;D:\code1\tetris\Project1\SDL2-2.32.4\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_image.lib;Shell32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -134,23 +168,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="fallingpiece.cpp" />
-    <ClCompile Include="game.cpp" />
-    <ClCompile Include="graphics.cpp" />
-    <ClCompile Include="input.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="shapegenerator..cpp" />
-    <ClCompile Include="states.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="defines.hpp" />
-    <ClInclude Include="fallingpiece.hpp" />
-    <ClInclude Include="game.hpp" />
-    <ClInclude Include="graphics.hpp" />
-    <ClInclude Include="input.hpp" />
-    <ClInclude Include="shapegenerator.hpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
