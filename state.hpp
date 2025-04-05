@@ -30,4 +30,4 @@ protected:
     Renderer *mRenderer;
 };
 
-#endif // STATE_HPP
+#endif 

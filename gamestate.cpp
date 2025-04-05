@@ -1,6 +1,6 @@
 #include "gamestate.hpp"
 
-#include <iostream> // DEBUG
+#include <iostream> 
 
 #include "inputmanager.hpp"
 #include "game.hpp"
@@ -8,11 +8,6 @@
 #include "texture.hpp"
 #include "utilities.hpp"
 
-/*
- * ====================================
- * Public methods start here
- * ====================================
- */
 
 GameState::GameState (InputManager *manager) : State (manager) { }
 
@@ -199,11 +194,6 @@ void GameState::draw ()
     drawNextPiece(nextPiece);
 }
 
-/*
- * ====================================
- * Private methods start here
- * ====================================
- */
 
 bool GameState::isGameOver ()
 {
@@ -469,7 +459,7 @@ void GameState::drawGhostPiece (Piece p)
         }
     }
 
-    tetrominoSprites->setAlphaMode(255); // Don't forget to change it back to normal!
+    tetrominoSprites->setAlphaMode(255); 
 }
 
 int GameState::getRandom (int lower_limit, int upper_limit)

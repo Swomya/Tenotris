@@ -1,10 +1,5 @@
 #include "board.hpp"
 
-/*
- * ====================================
- * Public methods start here
- * ====================================
- */
 
 Board::Board ()
 {
@@ -111,11 +106,6 @@ bool Board::isGameOver ()
     return game_over;
 }
 
-/*
- * ====================================
- * Private methods start here
- * ====================================
- */
 
 // Clears a filled row and moves all other blocks properly
 void Board::deleteLine (int r)

@@ -5,11 +5,7 @@
 #include "config.hpp"
 #include "game.hpp"
 
-/*
- * ====================================
- * Public methods start here
- * ====================================
- */
+
 
 OptionsState::OptionsState (InputManager *manager) : State (manager) {}
 
@@ -192,11 +188,6 @@ void OptionsState::draw ()
     Game::getInstance()->mRenderer->updateScreen();
 }
 
-/*
- * ====================================
- * Private methods start here
- * ====================================
- */
 
 // Change the resolution by changing the scaling
 void OptionsState::changeResolution (SettingChange s)

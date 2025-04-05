@@ -10,11 +10,6 @@
 #include "renderer.hpp"
 #include "state.hpp"
 
-/*
- * ====================================
- * Public methods start here
- * ====================================
- */
 
 MenuState::MenuState (InputManager *manager) : State (manager) {}
 

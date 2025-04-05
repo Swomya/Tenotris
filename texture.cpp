@@ -10,11 +10,6 @@
 #include "game.hpp"
 #include "renderer.hpp"
 
-/*
- * ====================================
- * Public methods start here
- * ====================================
- */
 
 Texture::Texture() {mTexture = nullptr;}
 

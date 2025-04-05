@@ -19,4 +19,4 @@ public:
 
 
 
-#endif // PIECE_HPP
+#endif

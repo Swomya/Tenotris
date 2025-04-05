@@ -1,5 +1,7 @@
 #include "config.hpp"
 
+//Scaling values
+
 namespace config
 {
    double resolution_scaling = 2;                                                               // Default value; Corresponds to 720p

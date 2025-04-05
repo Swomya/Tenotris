@@ -5,4 +5,4 @@
 
 void swap(Piece &a, Piece &b);
 
-#endif // UTILITIES_HPP
+#endif 

@@ -8,7 +8,7 @@
 #include "renderer.hpp"
 #include "state.hpp"
 
-// The main menu of the game; It is the state shown when the game starts
+// The main menu of the game
 class MenuState: public State
 {
 public:
@@ -29,4 +29,4 @@ private:
     int index;                          // Shows the current button selected
 };
 
-#endif // MENUSTATE_HPP
+#endif 

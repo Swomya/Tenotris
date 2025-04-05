@@ -2,12 +2,6 @@
 
 #include <string>
 
-/*
- * ====================================
- * Public methods start here
- * ====================================
- */
-
 Button::Button (std::string path, void (*callback) (), int posX, int posY)
 {
     callbackFunction = callback;

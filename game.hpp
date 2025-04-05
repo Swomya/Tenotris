@@ -16,11 +16,10 @@ class MenuState;
 class OptionsState;
 class PausedState;
 
-// Utilizes the "Singleton pattern" to ensure there can only be one game
 class Game
 {
 public:
-    friend class OptionsState;          // Options can change the window size            
+    friend class OptionsState;                     
     static Game* getInstance();
 
     bool initialize ();
@@ -39,7 +38,7 @@ public:
 
     bool isGameExiting();
 
-    Renderer *mRenderer;                // The renderer used for all things rendering
+    Renderer *mRenderer;   
     
 private:
     static Game *mInstance;

@@ -1,12 +1,7 @@
 #include "inputmanager.hpp"
+#include "audiomanager.hpp"
+#include <iostream> 
 
-#include <iostream> // debug
-
-/*
- * ====================================
- * Public methods start here
- * ====================================
- */
 
 InputManager::InputManager ()
 {
@@ -107,6 +102,13 @@ bool InputManager::pollAction ()
                     action = Action::pause;
                     break;
                 }
+
+                case SDLK_m:
+                {
+                    AudioManager::getInstance()->toggleMusic();
+                    break;
+                }
+
 
                 default:
                 {

@@ -21,7 +21,7 @@ private:
     std::vector<Button*> mButtons;
     Texture *paused_frame;
 
-    int index;                  // Shows the current button selected
+    int index;                 
 };
 
-#endif // PAUSEDSTATE_HPP
+#endif

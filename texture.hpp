@@ -31,4 +31,4 @@ private:
     int height;
 };
 
-#endif // TEXTURE_HPP
+#endif 

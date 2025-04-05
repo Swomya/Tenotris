@@ -13,12 +13,7 @@
 #include "optionsstate.hpp"
 #include "pausedstate.hpp"
 #include "state.hpp"
-
-/*
- * ====================================
- * Public methods start here
- * ====================================
- */
+#include "audiomanager.hpp"
 
 Game *Game::getInstance()
 {
@@ -65,17 +60,22 @@ bool Game::initialize()
     mRenderer = new Renderer;
     mRenderer->initialize(mWindow);
 
-    // The logical resolution of the game never changes; We just alter the scaling
     SDL_RenderSetLogicalSize(mRenderer->mSDLRenderer, config::logical_window_width, config::logical_window_height);
     SDL_SetWindowSize(mWindow, config::logical_window_width*config::resolution_scaling, config::logical_window_height*config::resolution_scaling);
     SDL_SetWindowPosition(mWindow, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED);
     
     mManager = new InputManager;
+    
+	AudioManager::getInstance()->initialize();
+    AudioManager* audioManager = AudioManager::getInstance();
+    audioManager->playMusic("assets/game.wav");
 
-    // Now load the main menu screen
+    //ain menu screen
     mMainMenuState = new MenuState(mManager);
     mMainMenuState->initialize();
     pushState(mMainMenuState);
+
+
     return success;
 }
 
@@ -100,6 +100,7 @@ void Game::exit ()
 // Main loop of the entire program. Gets the current state and simply runs it
 void Game::run ()
 {
+    
     if (!mStates.empty())
     {
         mStates.back()->run();

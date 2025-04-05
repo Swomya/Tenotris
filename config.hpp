@@ -44,7 +44,7 @@ namespace config
     const Uint8 background_r_light = 0xF9;                          // Background color for light mode
     const Uint8 background_g_light = 0xE6;
     const Uint8 background_b_light = 0xCF;
-    const Uint8 transparency_alpha = 100;                           // Default alpha for transparency (with 255 being no transparency)                             
+    const Uint8 transparency_alpha = 100;                           // Default transparency value                       
 }
 
 #endif // CONFIG_HPP

@@ -25,4 +25,4 @@ public:
     TTF_Font *bigFont;
 };
 
-#endif // RENDERER_HPP
+#endif 

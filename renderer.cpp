@@ -7,11 +7,6 @@
 
 #include "config.hpp"
 
-/*
- * ====================================
- * Public methods start here
- * ====================================
- */
 
 void Renderer::initialize (SDL_Window *window)
 {

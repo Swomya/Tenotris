@@ -9,7 +9,7 @@
 
 class OptionsState: public State
 {
-    // Enumeration used when change a setting
+
     enum class SettingChange {left, right};
 public:
     OptionsState (InputManager *inputmanager);
@@ -40,4 +40,4 @@ private:
     void changeGhostBlock (SettingChange s);
 };
 
-#endif // OPTIONSSTATE_HPP
+#endif 
